@@ -1,0 +1,13 @@
+- selected ||= -1
+- empty ||= false
+- content_for :before_main do
+  %aside
+    - if empty
+      %p
+    - else
+      %ul
+        - 4.times do |sn|
+          %li{ :class => (sn == selected) ? 'current' : nil }
+            %p
+              %span.step-number= (sn + 1)
+              = t ".step_#{sn + 1}.title"

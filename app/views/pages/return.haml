@@ -1,0 +1,33 @@
+- page_options :id => "return-ballot-page", :class => "has-illustrations"
+- content_for :pageheader do
+  %h1= t ".title"
+  #p= t ".summary"
+
+= render :partial => "shared/menu", :locals => { :selected => 3 }
+
+%section.instruction
+  = section_header(1, :image => "secureEnvelope", :image_alt => "Put Printed Ballot in Security Envelope")
+
+%section#returnEnvelope.instruction
+  = section_header(2, :image => "largeEnvelope", :image_alt => "Place Attestation Document in Return Envelope.")
+
+%section.instruction
+  = section_header(3, :image => "return", :alt => "Choose Return Service.")
+
+%section.instruction
+  = section_header(4, :no_tip => true, :image => "expressMail", :image_alt => "Mail the Return Envelope.") do
+    .vcard
+      .n
+        %span.given-name D.C. Board of Elections and Ethics
+        %span.family-name Public
+      .adr
+        .street-address 441 4th Street, NW
+        .extended-address Suite 250 North
+        %span.locality Washington
+        %span.region DC
+        %span.postal-code 20001
+    %p= t ".step_4.comment"
+  
+%footer
+  = link_to "Continue", thanks_path, :class => "button"
+  = link_to "Back", complete_path, :class => "button"

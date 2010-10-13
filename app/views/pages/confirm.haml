@@ -1,0 +1,41 @@
+- page_options :id => "confirm-identity-page", :class => "voting-pages instruction-pages has-illustrations"
+- content_for :pageheader do
+  %h1= t ".title"
+  #p= t ".summary"
+
+= render :partial => "shared/menu", :locals => { :selected => 1 }
+
+%section.instruction
+  = section_header(1)
+  .vcard
+    .n
+      %span.name= h(@registration.name)
+    .adr
+      .street-address= h(@registration.address)
+      %span.locality= h(@registration.city)
+      %span.region= h(@registration.state)
+      %span.postal-code= h(@registration.zip)
+
+  .checkbox-container
+    = check_box_tag "confirm", 1, false, :id => "confirm-checkbox"
+    %p= t ".step_1.check"
+
+%section#affirm.instruction
+  = section_header(2)
+  #affirm-checkbox-container.checkbox-container
+    = check_box_tag "affirm", 1, false, :id => "affirm-checkbox"
+    %p= t ".step_2.check"
+  %textarea#eligibility-agreement
+    = t ".agreement"
+
+%section.instruction
+  = section_header(3)
+  = image_tag "/images/openAttestationPDF_gray.png", :id => "attestation-pdf-disabled", :alt => "Open and View Your Attestation Document.", :width => "150", :height => "150"
+  = link_to "", attestation_path, :id => "attestation-pdf", :class => "instruction-image-link", :style => "display: none"
+
+%section.instruction
+  = section_header(4, :image => "print", :image_alt => "Print Your Attestation Document.")
+
+%footer
+  = link_to "Continue", complete_path, :class => "button", :id => "confirm-continue"
+  = link_to "Back",     check_in_path, :class => "button"

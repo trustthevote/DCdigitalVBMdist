@@ -1,0 +1,16 @@
+- page_options :id => "overview-page", :class => "mod"
+
+- content_for :pageheader do
+  %h1= t ".title"
+  #p= t ".summary"
+
+- 4.times do |sn|
+  - skey = "shared.menu.step_#{sn + 1}"
+  %section
+    %h1= sn + 1
+    %h2= t "#{skey}.title"
+    = pipe_list(t("#{skey}.summary"))
+
+%footer
+  = link_to "Continue", check_in_path, :class => "button"
+  = link_to "Back", front_path, :class => "button"

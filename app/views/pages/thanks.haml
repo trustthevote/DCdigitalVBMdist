@@ -1,0 +1,18 @@
+- page_options :id => "thankyou-page", :class => "mod", :about => :social
+- content_for :pageheader do
+  %h1= t ".title"
+  #p= t ".summary"
+
+= render "shared/menu", :empty => true
+
+%section.instruction
+  %header
+    %h1 Thank You!
+
+%section.instruction
+  %header
+    %h2= t ".status"
+    %h2= Time.now.to_s(:detailed)
+
+%footer
+  %p= t ".check"
