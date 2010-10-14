@@ -71,4 +71,30 @@ describe Registration do
       registration.activity_records.map(&:type).should == [ "Activity::CheckIn" ]
     end
   end
+  
+  context "status named scopes" do
+    before do
+      @unchecked  = Factory(:registration)
+      @unfinished = Factory(:registration, :checked_in_at => 2.minutes.ago)
+      @finished   = Factory(:registration, :completed_at => 1.minute.ago)
+    end
+    
+    it "should return correct records for .finished" do
+      Registration.finished.should        include @finished
+      Registration.finished.should_not    include @unchecked
+      Registration.finished.should_not    include @unfinished
+    end
+    
+    it "should return correct records for .checked_in" do
+      Registration.checked_in.should      include @unfinished
+      Registration.checked_in.should      include @finished
+      Registration.checked_in.should_not  include @unchecked
+    end
+    
+    it "should return correct records for .unfinished" do
+      Registration.unfinished.should      include @unfinished
+      Registration.unfinished.should_not  include @finished
+      Registration.unfinished.should_not  include @unchecked
+    end
+  end
 end

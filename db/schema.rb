@@ -53,8 +53,10 @@ ActiveRecord::Schema.define(:version => 20101014081759) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "completed_at"
+    t.datetime "checked_in_at"
   end
 
+  add_index "registrations", ["checked_in_at"], :name => "index_registrations_on_checked_in_at"
   add_index "registrations", ["completed_at"], :name => "index_registrations_on_completed_at"
   add_index "registrations", ["pin_hash", "voter_id", "name", "zip"], :name => "index_registrations_on_pin_hash_and_voter_id_and_name_and_zip", :unique => true
   add_index "registrations", ["precinct_split_id"], :name => "index_registrations_on_precinct_split_id"
