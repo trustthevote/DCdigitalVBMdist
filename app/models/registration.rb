@@ -25,7 +25,6 @@ class Registration < ActiveRecord::Base
   belongs_to  :precinct_split
   has_many    :activity_records, :class_name => "Activity::Base", :dependent => :delete_all
 
-  validates_presence_of :pin_hash
   validates_presence_of :precinct_split_id
 
   named_scope :inactive,   :conditions => "checked_in_at IS NULL AND completed_at IS NULL"
@@ -34,25 +33,12 @@ class Registration < ActiveRecord::Base
   named_scope :finished,   :conditions => "completed_at  IS NOT NULL"
 
   def self.match(r)
-    first(:conditions => {
-      :name     => r[:name],
-      :pin_hash => Registration.hash_pin(r[:pin]),
-      :zip      => r[:zip],
-      :voter_id => r[:voter_id] })
-  end
-
-  def pin=(v)
-    self.pin_hash = Registration.hash_pin(v)
+    first(:conditions => { :name => r[:name], :zip => r[:zip] })
   end
 
   # Returns the blank ballot PDF
   def blank_ballot
     precinct_split.try(:ballot_style).try(:pdf)
-  end
-
-  def self.hash_pin(pin)
-    return nil if pin.blank?
-    Digest::SHA1.hexdigest(pin.to_s.gsub(/[^0-9A-Z]/i, '').upcase)
   end
 
   def register_flow_completion!

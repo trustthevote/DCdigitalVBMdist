@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(:version => 20101014081759) do
   create_table "registrations", :force => true do |t|
     t.string   "name"
     t.string   "zip"
-    t.string   "pin_hash"
-    t.string   "voter_id"
     t.string   "address"
     t.string   "city"
     t.string   "state"
@@ -58,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20101014081759) do
 
   add_index "registrations", ["checked_in_at"], :name => "index_registrations_on_checked_in_at"
   add_index "registrations", ["completed_at"], :name => "index_registrations_on_completed_at"
-  add_index "registrations", ["pin_hash", "voter_id", "name", "zip"], :name => "index_registrations_on_pin_hash_and_voter_id_and_name_and_zip", :unique => true
+  add_index "registrations", ["name", "zip"], :name => "index_registrations_on_name_and_zip", :unique => true
   add_index "registrations", ["precinct_split_id"], :name => "index_registrations_on_precinct_split_id"
 
 end

@@ -19,8 +19,6 @@
 # Thomas Gaskin, Sean Durham, John Sebes.
 
 class SeedGenerator
-  CHARS_IN_PIN            = 16
-  CHARS_IN_VOTER_ID       = 9
   FIRST_UNIT              = 1000
   REGISTRATIONS_PER_SPLIT = 400
 
@@ -64,7 +62,7 @@ ballot_style  = nil
 split         = precinct.splits.find_or_create_by_name(:name => '#{split_name}', :ballot_style => ballot_style)
 
 puts
-puts "#{'Name'.ljust(30, ' ')} #{'PIN'.ljust(CHARS_IN_PIN, ' ')} #{'Voter ID'.ljust(CHARS_IN_VOTER_ID, ' ')} ZIP"
+puts "#{'Name'.ljust(30, ' ')} ZIP"
 EOF
 
     unit          = FIRST_UNIT
@@ -72,19 +70,15 @@ EOF
     REGISTRATIONS_PER_SPLIT.times do |n|
       name        = Faker::Name.name
       key         = "#{n}#{name}#{zip}#{Time.now.to_i}".gsub(/[^A-Z0-9]/i, '')
-      pin         = Radix.convert(key, 62, 16)[0, CHARS_IN_PIN]
-      vid         = Radix.convert(key, 62, 10)[0, CHARS_IN_VOTER_ID]
 
       f.puts <<-EOF
 split.registrations.create(
   :name        => "#{name}",
-  :pin         => '#{pin}',
-  :voter_id    => '#{vid}', 
   :address     => "#{address}, Unit #{unit}",
   :city        => 'Washington',
   :state       => 'DC',
   :zip         => '#{zip}')
-puts "#{name.ljust(30, ' ')} #{pin} #{vid} #{zip}"
+puts "#{name.ljust(30, ' ')} #{zip}"
 
 EOF
 

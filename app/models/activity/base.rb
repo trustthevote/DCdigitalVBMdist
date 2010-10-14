@@ -26,7 +26,7 @@ class Activity::Base < ActiveRecord::Base
 
   # Returns the description of this event for the log
   def description
-    "%s - %-9s - %-30s" % [ created_at, registration.voter_id, registration.name ]
+    "%s - %-30s" % [ created_at, registration.name ]
   end
 
 end

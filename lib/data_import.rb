@@ -61,7 +61,7 @@ class DataImport
         next
       end
       
-      voterid, pin_hash, lastname, firstname, middlename, suffix, address_id, status_id, party_id, precinct_name, ward, smd = *row
+      _, _, lastname, firstname, middlename, suffix, address_id, status_id, party_id, precinct_name, ward, smd = *row
       
       if precinct.nil? || precinct.name != precinct_name
         precinct = Precinct.find_or_create_by_name(precinct_name)
@@ -81,14 +81,12 @@ class DataImport
       
       r = split.registrations.create(
         :name        => [ firstname, middlename, lastname, suffix ].reject { |i| i.blank? }.join(" "),
-        :pin         => pin_hash, # TODO change to :pin_hash
-        :voter_id    => voterid,
         :address     => address[:address],
         :city        => address[:city],
         :state       => address[:state],
         :zip         => address[:zip])
       
-      puts "#{r.name.ljust(30, ' ')} #{pin_hash} #{voterid} #{address[:zip]}"
+      puts "#{r.name.ljust(30, ' ')} #{address[:zip]}"
     end
   end
 end

@@ -26,7 +26,7 @@ describe Activity::Base do
 
   it "should have correct .description" do
     a = Factory(:activity)
-    a.description.should == "%s - %-9s - %-30s" % [ a.created_at, a.registration.voter_id, a.registration.name ]
+    a.description.should == "%s - %-30s" % [ a.created_at, a.registration.name ]
   end
 
 end

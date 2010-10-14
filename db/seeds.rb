@@ -44,9 +44,7 @@ ballot_style = split.create_ballot_style(:pdf => File.open("#{Rails.root}/db/fix
 Registration.create!(
   :precinct_split_id => split.id,
   :name              => 'Mike',
-  :pin               => '1234',
   :zip               => '24001',
-  :voter_id          => '1234',
   :address           => "142 N Street",
   :city              => "Washington",
   :state             => "DC")

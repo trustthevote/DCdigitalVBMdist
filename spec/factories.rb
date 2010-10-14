@@ -18,7 +18,6 @@
 # Contributors: Paul Stenbjorn, Aleksey Gureiev, Robin Bahr,
 # Thomas Gaskin, Sean Durham, John Sebes.
 
-Factory.sequence(:pin)  { |i| i.to_s.rjust(4, '0') }
 Factory.sequence(:name) { |i| "name_#{i}" }
 
 Factory.define :precinct do |f|
@@ -41,9 +40,7 @@ end
 Factory.define :registration do |f|
   f.association       :precinct_split
   f.name              { Faker::Name.name }
-  f.pin               { Factory.next(:pin) }
   f.zip               '34001'
-  f.voter_id          { Factory.next(:pin) }
 end
 
 Factory.define :activity, :class => Activity::Base do |f|
