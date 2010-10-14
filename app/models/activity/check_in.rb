@@ -19,4 +19,10 @@
 # Thomas Gaskin, Sean Durham, John Sebes.
 
 class Activity::CheckIn < Activity::Base
+  
+  # Returns the description of this event for the log
+  def description
+    "%s - Checked in" % super
+  end
+
 end

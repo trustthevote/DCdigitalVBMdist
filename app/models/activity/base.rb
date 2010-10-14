@@ -24,4 +24,9 @@ class Activity::Base < ActiveRecord::Base
 
   belongs_to :registration
 
+  # Returns the description of this event for the log
+  def description
+    "%s - %-9s - %-30s" % [ created_at, registration.voter_id, registration.name ]
+  end
+
 end

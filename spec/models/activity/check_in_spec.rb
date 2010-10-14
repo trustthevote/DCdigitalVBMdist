@@ -20,6 +20,12 @@
 
 require 'spec_helper'
 
-describe Activity::Completion do
+describe Activity::CheckIn do
+  
   it { should belong_to(:registration) }
+
+  it "should have correct .description" do
+    Factory(:check_in).description.should include "Checked in"
+  end
+  
 end

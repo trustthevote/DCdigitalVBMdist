@@ -19,4 +19,10 @@
 # Thomas Gaskin, Sean Durham, John Sebes.
 
 class Activity::Completion < Activity::Base
+
+  # Returns the description of this event for the log
+  def description
+    "%s - Completed" % super
+  end
+
 end

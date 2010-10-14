@@ -24,7 +24,7 @@ class Stats
     total      = Registration.count
     inactive   = Registration.inactive.count
     unfinished = Registration.unfinished.count
-    finished   = 0 # TODO
+    finished   = Registration.finished.count
 
     [ [ "Total number of voters", total ],
       [ "Inactive", "#{inactive} (#{percent(inactive, total)})" ],
@@ -43,19 +43,12 @@ class Stats
   end
   
   def log
-    checked_in = [ ] # TODO: Check-in events
-    completed  = [ ] # TODO: Completion events
-    records    = [ checked_in, completed ].flatten.compact.sort_by { |r| r.dte }
-
     puts
     puts "Activity log:"
     puts
     
-    records.each do |r|
-      dte, name, voter_id = r.dte, r.name, r.voter_id
-      type = "" # TODO: Correct type
-
-      puts "%s - %-23s - %s %s" % [ dte, type, voter_id, name ]
+    Activity::Base.all(:order => "created_at", :include => :registration).each do |r|
+      puts r.description
     end
   end
   

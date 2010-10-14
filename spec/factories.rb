@@ -45,3 +45,15 @@ Factory.define :registration do |f|
   f.zip               '34001'
   f.voter_id          { Factory.next(:pin) }
 end
+
+Factory.define :activity, :class => Activity::Base do |f|
+  f.association       :registration
+end
+
+Factory.define :check_in, :class => Activity::CheckIn do |f|
+  f.association       :registration
+end
+
+Factory.define :completion, :class => Activity::Completion do |f|
+  f.association       :registration
+end
