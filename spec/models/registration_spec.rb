@@ -83,9 +83,7 @@ describe Registration do
     end
     
     it "should return correct records for .finished" do
-      Registration.finished.should        include @finished
-      Registration.finished.should_not    include @unchecked
-      Registration.finished.should_not    include @unfinished
+      Registration.finished.should        == [ @finished ]
     end
     
     it "should return correct records for .checked_in" do
@@ -95,9 +93,11 @@ describe Registration do
     end
     
     it "should return correct records for .unfinished" do
-      Registration.unfinished.should      include @unfinished
-      Registration.unfinished.should_not  include @finished
-      Registration.unfinished.should_not  include @unchecked
+      Registration.unfinished.should      == [ @unfinished ]
+    end
+    
+    it "should return correct records for .inactive" do
+      Registration.inactive.should        == [ @unchecked ]
     end
   end
 end

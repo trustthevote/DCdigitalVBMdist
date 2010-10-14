@@ -28,7 +28,7 @@ class Registration < ActiveRecord::Base
   validates_presence_of :pin_hash
   validates_presence_of :precinct_split_id
 
-  named_scope :inactive,   :conditions => { :checked_in_at => nil }
+  named_scope :inactive,   :conditions => "checked_in_at IS NULL AND completed_at IS NULL"
   named_scope :checked_in, :conditions => "checked_in_at IS NOT NULL OR  completed_at IS NOT NULL"
   named_scope :unfinished, :conditions => "checked_in_at IS NOT NULL AND completed_at IS NULL"
   named_scope :finished,   :conditions => "completed_at  IS NOT NULL"
