@@ -22,6 +22,10 @@ require 'spec_helper'
 
 describe Registration do
 
+  it { should have_many :activity_records }
+
+  let(:registration) { Factory(:registration) }
+
   it "should return the empty ballot PDF" do
     b = Factory(:ballot_style)
     r = Factory(:registration, :precinct_split_id => b.precinct_split_id)
@@ -53,24 +57,15 @@ describe Registration do
     end
   end
 
-  describe "when registering flow completion" do
+  context "logging activities" do
     it "should register the completion" do
-      r = Factory(:registration)
-
-      r.register_flow_completion!
-
-      pending
+      registration.register_flow_completion!
+      registration.activity_records.map(&:type).should == [ "Activity::Completion" ]
     end
-  end
-  
-  describe "when registering a check in" do
-    it "should set the time" do
-      Timecop.freeze do
-        r = Factory(:registration)
-        r.register_check_in!
-
-        pending
-      end
+    
+    it "should register the check-in" do
+      registration.register_check_in!
+      registration.activity_records.map(&:type).should == [ "Activity::CheckIn" ]
     end
   end
 end

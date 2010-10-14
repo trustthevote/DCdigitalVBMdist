@@ -27,9 +27,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'rspec', '1.3.0'
+  gem 'rspec-rails', '1.3.2'
   gem 'timecop'
   gem 'factory_girl'
+  gem 'shoulda'
   gem 'mocha', :require => nil # This is important. Otherwise you won't be able to mock finders
 end

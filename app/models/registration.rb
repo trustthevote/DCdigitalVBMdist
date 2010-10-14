@@ -23,6 +23,7 @@ require 'digest/sha1'
 class Registration < ActiveRecord::Base
 
   belongs_to  :precinct_split
+  has_many    :activity_records, :class_name => "Activity::Base", :dependent => :delete_all
 
   validates_presence_of :pin_hash
   validates_presence_of :precinct_split_id
@@ -54,9 +55,11 @@ class Registration < ActiveRecord::Base
   end
 
   def register_flow_completion!
+    self.activity_records << Activity::Completion.new
   end
   
   def register_check_in!
+    self.activity_records << Activity::CheckIn.new
   end
   
 end

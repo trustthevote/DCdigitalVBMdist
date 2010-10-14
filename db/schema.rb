@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100830122801) do
+ActiveRecord::Schema.define(:version => 20101014075113) do
+
+  create_table "activity_log", :force => true do |t|
+    t.integer  "registration_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "activity_log", ["registration_id"], :name => "index_activity_log_on_registration_id"
 
   create_table "ballot_styles", :force => true do |t|
     t.integer  "precinct_split_id", :null => false
