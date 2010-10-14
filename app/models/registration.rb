@@ -55,6 +55,7 @@ class Registration < ActiveRecord::Base
   end
 
   def register_flow_completion!
+    self.update_attributes!(:completed_at => Time.now)
     self.activity_records << Activity::Completion.new
   end
   

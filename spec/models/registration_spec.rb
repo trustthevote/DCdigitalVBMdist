@@ -59,8 +59,11 @@ describe Registration do
 
   context "logging activities" do
     it "should register the completion" do
-      registration.register_flow_completion!
-      registration.activity_records.map(&:type).should == [ "Activity::Completion" ]
+      Timecop.freeze do
+        registration.register_flow_completion!
+        registration.activity_records.map(&:type).should == [ "Activity::Completion" ]
+        registration.completed_at.should == Time.now
+      end
     end
     
     it "should register the check-in" do
