@@ -59,3 +59,6 @@ end
 
 # Signature line
 pdf.stroke_line [ 200, 100 ], [ pdf.bounds.right, 100 ]
+
+# Date line
+pdf.stroke_line [ 200, 25 ], [ pdf.bounds.right, 25 ]
