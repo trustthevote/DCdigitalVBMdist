@@ -12,21 +12,19 @@
 
 
 %section#welcome
+
+%section.welcome
   %h1= t '.welcome'
-  = t '.intro'
-
-#options
+  %p= t '.intro'
   %p= t '.prompt'
-
-%section
-  %h2= t ".title"
-  %p= t ".summary"
   %ul
     - t(".steps").split('|').each do |step|
       %li= step
-  %br
-  %p See more #{link_to "information", help_page_path('instructions', 'index'), :target => "_blank" } about this option.
+  %p= t '.thanks'
+  %p= link_to "Start Mail-in Ballot", during_voting? ? overview_path : front_path, :class => button_class(!during_voting?)
+  %p#instructions
+    Read complete #{link_to "instructions", help_path, :target => "_blank"} for the service.
 
-%footer
-  = link_to "Start Mail-in Ballot", during_voting? ? overview_path : front_path, :class => button_class(!during_voting?)
-  .button-padding
+%section.software
+  = render 'software_requirements'
+

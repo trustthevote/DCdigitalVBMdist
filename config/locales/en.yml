@@ -32,11 +32,10 @@ en:
   pages:
     front:
       welcome: "Welcome to the District of Columbia<br />Digital Vote-by-mail Service"
-      intro: "<p>D.C. Digital Vote-by-Mail is a new service to the overseas and military voters of the District of Columbia. We&rsquo;ve designed this service to make it easier for you to receive your voting materials and help you return your completed ballot more quickly.</p><p>Thank you for your participation in this election.</p><p><em>District of Columbia Board of Election and Ethics</em></p>"
-      prompt: "<strong>Digital Ballot Download</strong>"
-      title: Physical Ballot Return
-      summary: Complete your ballot and return materials by mail or express delivery service.
-      steps: Obtain your blank ballot and other vote-by-mail materials|Complete them online and print them|Return materials by <strong>mail or express delivery service</strong>
+      intro: "<p>D.C. Digital Vote-by-Mail is a new service to the overseas and military voters of the District of Columbia. We&rsquo;ve designed this service to make it easier for you to receive your voting materials and help you return your completed ballot more quickly.</p>"
+      prompt: "Using this service you will:"
+      steps: "Download a voter attestation and print it|Download your ballot, fill it out, and print it|Return both attestation and ballot by mail or express delivery service."
+      thanks: "<p>Thank you for your participation in this election.</p>"
 
     overview:
       title: Digital Vote-by-Mail Service

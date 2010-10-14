@@ -591,16 +591,29 @@ footer nav a {
 	width:280px;
 }
 
-#intro-page #main #welcome h1 {
+#intro-page #main .welcome h1, #intro-page #main .software h1 {
 	margin-bottom:18px;
 	padding: 0;
 	
 	border: none;
-	color: #F05133;
 	
 	font-size: 13px;
 	line-height: 18px;
 }
+
+#intro-page #main .welcome h1 { color: #F05133; }
+#intro-page #main .software h1 { color: #000; }
+#intro-page #main .software {
+  width: 260px;
+  padding: 20px 20px 0;
+  background-color: #ECECEC;
+}
+
+#intro-page #main .software ol { padding-left: 20px; margin-bottom: 20px; }
+#intro-page #main .software li { list-style-type: decimal; text-indent: 0; }
+#intro-page #main .software li:before { content: ' '; }
+#intro-page .software .icons { margin: 10px 20px; }
+#intro-page .software img { float: none; margin-right: 10px; }
 
 #options p {
 	margin-left: 320px;
@@ -636,15 +649,10 @@ footer nav a {
 	float:left;
 }
 
-#intro-page .button, #intro-page .button-padding {
+#intro-page .button {
 	float:left;
-	margin-top:18px;
-	margin-left:160px;
-	margin-right: 10px;
+	margin-top:36px;
 	width:130px;
-}
-
-#intro-page .button {	
 	background-color: #F05133;
 }
 
@@ -671,7 +679,9 @@ footer nav a {
 }
 
 #intro-page p#instructions {
-	width: 320px;
+  clear: left;
+  padding-top: 150px;
+	width: 300px;
 }
 
 #intro-page>footer nav {
