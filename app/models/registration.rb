@@ -61,6 +61,7 @@ class Registration < ActiveRecord::Base
   end
   
   def register_check_in!
+    self.update_attributes!(:checked_in_at => Time.now)
     self.activity_records << Activity::CheckIn.new
   end
   

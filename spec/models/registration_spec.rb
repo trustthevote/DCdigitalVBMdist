@@ -67,8 +67,11 @@ describe Registration do
     end
     
     it "should register the check-in" do
-      registration.register_check_in!
-      registration.activity_records.map(&:type).should == [ "Activity::CheckIn" ]
+      Timecop.freeze do
+        registration.register_check_in!
+        registration.activity_records.map(&:type).should == [ "Activity::CheckIn" ]
+        registration.checked_in_at.should == Time.now
+      end
     end
   end
   
