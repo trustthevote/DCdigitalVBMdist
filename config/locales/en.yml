@@ -338,11 +338,8 @@ en:
       slug: instructions
       title: Instructions
       page_1:
-        slug: physical
+        slug: index
         title: Return Ballot by Mail
-      page_2:
-        slug: digital
-        title: Digital Ballot Return
 
     section_6:
       slug: security
