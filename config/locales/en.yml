@@ -43,10 +43,10 @@ en:
 
     check_in:
       title: Check In
-      summary: "Your name and ZIP code must match the information we have in your current voter record. All fields are required."
-      prompt: "Please enter your name and ZIP code."
-      tip_title: Pin Number
-      tip: "You must correctly enter your name and ZIP codeto check in to obtain your ballot. All of this information can be found in the letter sent to you by the BOEE."
+      summary: "Your name, ZIP code, and SSN4 must match the information we have in your current voter record. All fields are required."
+      prompt: "Please enter your name, ZIP code, and the last four digits of your social security number (SSN4)."
+      tip_title: Voter Indo
+      tip: "You must correctly enter your name, ZIP code, and SSN4 to check in to obtain your ballot. This information can be found in the letter sent to you by the BOEE."
 
       not_found: Could Not Find Record
       explanation: "<p>Sorry, we couldn’t find your record. Try again. Provide the information you used when you registered to vote.</p>"
@@ -269,7 +269,7 @@ en:
         title: Voter Identification
         question_1:
           q: 'I am having trouble checking in. What should I do now?'
-          a: "<p>To be recognized as a person who is eligible to vote in this election, your name must match information we have on file in your current voter record. You check in by correctly entering your name and ZIP code. If you aren't found in the database, check to make certain your information is correct and try again. For additional help, contact the BOEE at (202) 727-2525.</p>"
+          a: "<p>To be recognized as a person who is eligible to vote in this election, your name must match information we have on file in your current voter record. You check in by correctly entering your name, ZIP code, and the last 4 digits of your social security number (SSN4). If you aren't found in the database, check to make certain your information is correct and try again. For additional help, contact the BOEE at (202) 727-2525.</p>"
         question_2:
           q: 'What is an attestation form?'
           a: "<p>The attestation form affirms that you are eligible to vote with an absentee ballot. You must read the attestation on the web page and check the check box to confirm it. Then download, print, and include the printed attestation form with your completed ballot. </p>"
@@ -365,7 +365,7 @@ en:
     menu:
       step_1:
         title: Check In
-        summary: "Enter name and ZIP code"
+        summary: "Enter name, ZIP code, and SSN4"
       step_2:
         title: Confirm Identity
         summary: Confirm your identity|Affirm voting eligibility|Download your attestation document|View your attestation document|Print your attestation document
