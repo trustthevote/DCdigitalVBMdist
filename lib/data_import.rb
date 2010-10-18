@@ -82,8 +82,6 @@ class DataImport
       r = split.registrations.create(
         :name        => [ firstname, middlename, lastname, suffix ].reject { |i| i.blank? }.join(" "),
         :address     => address[:address],
-        :city        => address[:city],
-        :state       => address[:state],
         :zip         => address[:zip])
       
       puts "#{r.name.ljust(30, ' ')} #{address[:zip]}"

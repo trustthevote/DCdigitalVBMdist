@@ -35,12 +35,12 @@ describe Registration do
 
   describe "when matches" do
     it "should find the record that matches info" do
-      r = Factory(:registration)
-      Registration.match(:name => r.name, :zip => r.zip).should == r
+      r = Factory(:registration, :ssn4 => "1234")
+      Registration.match(:name => r.name, :zip => r.zip, :ssn4 => "1234").should eql r # Strangely '==' doesn't work here
     end
   
     it "should return nil if nothing was found" do
-      Registration.match(:name => "Unknown", :zip => "24001").should be_nil
+      Registration.match(:name => "Unknown", :zip => "24001", :ssn4 => '').should be_nil
     end
   end
 
@@ -86,5 +86,10 @@ describe Registration do
     it "should return correct records for .inactive" do
       Registration.inactive.should        == [ @unchecked ]
     end
+  end
+  
+  context "when setting ssn4" do
+    before  { registration.ssn4 = "1234" }
+    specify { registration.ssn4_hash.should_not be_nil }
   end
 end

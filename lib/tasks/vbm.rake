@@ -19,14 +19,18 @@
 # Thomas Gaskin, Sean Durham, John Sebes.
 
 namespace :vbm do
-  desc "Generate sample seed records for db/fixtures"
-  task :generate_test_seeds => :environment do
-    SeedGenerator.new.run
-  end
   
   desc "Display stats and the activity log"
   task :stats => :environment do
     Stats.new.run
+  end
+
+  desc "Import data"
+  task :import => :environment do
+    voter_csv   = ENV['voter_csv']
+    ballots_zip = ENV['ballots_zip']
+    
+    DataImport2.new.run(voter_csv, ballots_zip)
   end
   
   namespace :voting_state do
