@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101014081759) do
+ActiveRecord::Schema.define(:version => 20101018070117) do
 
   create_table "activity_log", :force => true do |t|
     t.integer  "registration_id"
@@ -45,18 +45,18 @@ ActiveRecord::Schema.define(:version => 20101014081759) do
     t.string   "name"
     t.string   "zip"
     t.string   "address"
-    t.string   "city"
-    t.string   "state"
     t.integer  "precinct_split_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "completed_at"
     t.datetime "checked_in_at"
+    t.string   "ssn4_hash"
   end
 
   add_index "registrations", ["checked_in_at"], :name => "index_registrations_on_checked_in_at"
   add_index "registrations", ["completed_at"], :name => "index_registrations_on_completed_at"
   add_index "registrations", ["name", "zip"], :name => "index_registrations_on_name_and_zip", :unique => true
   add_index "registrations", ["precinct_split_id"], :name => "index_registrations_on_precinct_split_id"
+  add_index "registrations", ["ssn4_hash"], :name => "index_registrations_on_ssn4_hash"
 
 end

@@ -52,7 +52,6 @@ pdf.bounding_box [ 200, 330 ], :width => 300 do
   pdf.move_down 5
   pdf.font_size 16
   pdf.text @registration.address
-  pdf.text "#{@registration.city}, #{@registration.state} #{@registration.zip}"
 end
 
 # Signature line

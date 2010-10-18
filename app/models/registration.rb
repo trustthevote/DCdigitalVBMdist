@@ -33,7 +33,7 @@ class Registration < ActiveRecord::Base
   named_scope :finished,   :conditions => "completed_at  IS NOT NULL"
 
   def self.match(r)
-    first(:conditions => { :name => r[:name], :zip => r[:zip] })
+    first(:conditions => { :name => r[:name], :zip => r[:zip], :ssn4_hash => Registration.hash(r[:ssn4]) })
   end
 
   # Returns the blank ballot PDF
@@ -50,5 +50,16 @@ class Registration < ActiveRecord::Base
     self.update_attributes!(:checked_in_at => Time.now)
     self.activity_records << Activity::CheckIn.new
   end
+
+  def ssn4=(val)
+    self.ssn4_hash = Registration.hash(val)
+  end
   
+  private
+  
+  def self.hash(val)
+    return nil if val.blank?
+    Digest::SHA1.hexdigest(val.to_s.gsub(/[^0-9A-Z]/i, '').upcase)
+  end
+
 end
