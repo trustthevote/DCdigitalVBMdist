@@ -36,7 +36,7 @@ class DataImport2
       
       split.registrations.create!(
         :name     => name,
-        :address  => row['MAILINGADDRESS '],
+        :address  => row['MAILINGADDRESS'],
         :ssn4     => ssn4,
         :zip      => row['ZIP'])
 
@@ -60,7 +60,7 @@ class DataImport2
   end
 
   def update_precincts(ballot_info)
-    log "  - Removing old precincts, splits and regirations"
+    log "  - Removing old precincts, splits and registrations"
     Precinct.destroy_all
     
     log "  - Loading ballots for splits:"
