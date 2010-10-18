@@ -45,7 +45,7 @@ en:
       title: Check In
       summary: "Your name, ZIP code, and SSN4 must match the information we have in your current voter record. All fields are required."
       prompt: "Please enter your name, ZIP code, and the last four digits of your social security number (SSN4)."
-      tip_title: Voter Indo
+      tip_title: Voter Info
       tip: "You must correctly enter your name, ZIP code, and SSN4 to check in to obtain your ballot. This information can be found in the letter sent to you by the BOEE."
 
       not_found: Could Not Find Record
@@ -260,7 +260,7 @@ en:
           a: '<p>Do not fill out and return more than one Ballot. If you receive your absentee ballot through the mail after you have already marked and returned a ballot, disregard the absentee ballot. If you do fill and return more than one ballot, only the first ballot will be counted.</p>'
         question_7:
           q: 'How will I know that my ballot has been received?'
-          a: '<p>By law, voters must be informed when their ballots have arrived and are ready to be counted.  If you return your ballot by mail you will receive a confirmation message that your ballot is completed. If you return your ballot via the Internet, your ballot is received immediately. A message will confirm date and time ballot was sent. In both cases, you can find out the status of your ballot <a href="http://www.dcboee.us/">here</a>.</p>'
+          a: '<p>By law, voters must be informed when their ballots have arrived and are ready to be counted.  If you return your ballot by mail you will receive a confirmation message that your ballot is completed. You can find out the status of your ballot <a href="http://www.dcboee.us/">here</a>.</p>'
         question_8:
           q: 'How can I be certain my vote will be counted?'
           a: '<p>Ballots returned through the Digital Vote-by-Mail Service are processed in exactly the same way as all Vote By Mail ballots. The attestation document is reviewed to confirm voter eligibility. Approved ballots are separated from linked attestations, then removed from the security envelope. Marked ballots are then counted by hand or scanned to be counted.</p>'
