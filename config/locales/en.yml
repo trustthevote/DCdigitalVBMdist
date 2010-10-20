@@ -285,7 +285,7 @@ en:
           a: "<p>To mark your ballot digitally, you must use Adobe Reader.</p><p>The ballot is marked by clicking on the round circle next to a candidate's name.</p><h3>To vote for:</h3><h4>A candidate</h4><ul class='dashed-list'><li>Click on the circle next to candidate name(s) to select it. Do not vote for more candidates than indicated. This will result in an overvote and your vote for that office will not count.</li></ul><h4>A measure</h4><ul class='dashed-list'><li>Click on circle next to YES or NO to select it.</li><li>Do <strong>not</strong> vote both YES and NO. This will result in an overvote and your vote on that measure will not count.</li></ul><h4>Qualified write-in candidates</h4> <span>(Write-in votes are valid for qualified candidates only)</span><ul class='dashed-list'><li>Type in qualified write-in candidate's name in the blank space provided.</li><li>The total number of votes including write-ins must not exceed the maximum number of votes allowed for the contest or your vote for that contest will not count.</li></ul>"
         question_3:
           q: 'How do I save my Ballot?'
-          a: '<p>You do not need to save your ballot, but you do need to print it, by slecting Print from in the File Menu of Adobe Reader.</p>'
+          a: '<p>You do not need to save your ballot, but you do need to print it, by selecting Print from in the File Menu of Adobe Reader.</p>'
         question_4:
           q: "I printed my ballot, but it doesn't have my votes on it."
           a: "<p>You must use Adobe Reader to mark your ballot and then print the marked ballot. If you use any other tool to mark your ballot, the ballot may not print correctly. Alternatively, you can print your blank ballot, and mark it by hand.</p>"
