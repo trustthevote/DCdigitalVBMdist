@@ -129,11 +129,11 @@ en:
 
     about:
       title: About
-      info: "<p>Digital Vote-by-Mail is a new service created by the District of Columbia Board of Elections and Ethics. The service delivers election materials to overseas voters through the Internet, allows voters to complete ballots online, and provides options for ballot return. </p><p>The goal of the Digital Vote-by-Mail Service is to enable the quick return of ballots from military personnel and citizens overseas.</p><p>Digital Vote-by-Mail will be introduced to overseas voters in the November 2nd General&nbsp;Election in Washington, D.C. For the election, the District of Columbia will digitally generate and transport ballots for 2,500 military and overseas voters.</p><p>The Digital Ballot Return pilot project is also being introduced in the November 2nd General&nbsp;Election.</p>"
+      info: "<p>Digital Vote-by-Mail is a new service created by the District of Columbia Board of Elections and Ethics. The service delivers election materials to overseas voters through the Internet, allows voters to complete ballots online, and provides options for ballot return. </p><p>The goal of the Digital Vote-by-Mail Service is to enable the quick return of ballots from military personnel and citizens overseas.</p><p>Digital Vote-by-Mail will be introduced to overseas voters in the November 2nd General&nbsp;Election in Washington, D.C. For the election, the District of Columbia will generate ballots for qualified D.C military and overseas voters.</p>"
 
     contact:
       title: Contact
-      info: '<h2>By Mail</h2><div class="vcard"><div class="n"><span class="given-name">D.C. Board of Elections and Ethics</span></div><div class="adr"><div class="street-address">441 4th Street, NW</div><div class="extended-address">Suite 250 North</div><span class="locality">Washington</span>,<span class="region">DC</span><span class="postal-code">20001</span></div></div><h2>By Web</h2><div class="vcard"><div>Email: <span class="email">director@dcboee.org</span></div><div>Website: <span class="url">http://www.dcboee.org</span></div><div>Office Hours: <span class="details">8:15 am to 4:45 pm, Monday through Friday, except for filing deadlines (5:00 pm closing) and District holidays</span></div></div><h2>By Phone</h2><div class="vcard"><div class="tel"><span class="type">Main:</span> (202) 727-2525</div><div class="tel"><span class="type">Fax:</span> (202) 347-2648</div></div><h1>Feedback</h1><p>The District of Columbia Board of Elections and Ethics welcomes your feedback on the Digital Vote-by-Mail service and the Digital Ballot Return pilot project.</p><p>Please send your comments to the <a href="mailto:director@dcboee.org">BOEE</a>.</p>'
+      info: '<h2>By Mail</h2><div class="vcard"><div class="n"><span class="given-name">D.C. Board of Elections and Ethics</span></div><div class="adr"><div class="street-address">441 4th Street, NW</div><div class="extended-address">Suite 250 North</div><span class="locality">Washington</span>,<span class="region">DC</span><span class="postal-code">20001</span></div></div><h2>By Web</h2><div class="vcard"><div>Email: <span class="email">director@dcboee.org</span></div><div>Website: <span class="url">http://www.dcboee.org</span></div><div>Office Hours: <span class="details">8:15 am to 4:45 pm, Monday through Friday, except for filing deadlines (5:00 pm closing) and District holidays</span></div></div><h2>By Phone</h2><div class="vcard"><div class="tel"><span class="type">Main:</span> (202) 727-2525</div><div class="tel"><span class="type">Fax:</span> (202) 347-2648</div></div><h1>Feedback</h1><p>The District of Columbia Board of Elections and Ethics welcomes your feedback on the Digital Vote-by-Mail service.</p><p>Please send your comments to the <a href="mailto:director@dcboee.org">BOEE</a>.</p>'
 
   help:
     section_1:
@@ -150,7 +150,7 @@ en:
         title: Key Dates
         question_1:
           q: "What are key dates concerning the November 2nd election?"
-          a: "<h3>October 21</h3><p>Digital Vote-by-Mail Service Begins</p><h3>October 22</h3><p>Last Day to Apply for a Vote-by-Mail Ballot</p><h3>November 2nd</h3><p>Last Day to Return Your Ballot (by mail, must be postmarked by November 2nd, 5 pm EST)</p>"
+          a: "<h3>November 2nd</h3><p>Last Day to Return Your Ballot by mail, must be postmarked by November 2nd, 8 pm EST)</p><h3>November 17</h3><p> Vote-by-Mail ballots must arrive by November 17, in order to be eligible for counting.</p>"
         question_2:
           q: "When is the best time to apply for an absentee ballot?"
           a: "<p>Registered voters may apply for a vote-by-mail ballot for an upcoming election at any time. If you apply by mail, your application must be received no later than 7 days before an election.</p><p>For the November 2nd general election, the last day to apply for a vote-by-mail ballot by mail is October 22, 2010.</p>"
@@ -159,7 +159,7 @@ en:
           a: "<p>Information about the Digital Vote-by-Mail Service was mailed to voters in the month of September, 2010. Each voter will receive instructions for using the service.</p>"
         question_4:
           q: "When can I use the Digital Vote-by-Mail Service?"
-          a: "<p>The Digital Vote-by-Mail Service will be available for use beginning October 1 at 8:15 am EST. The service will close on November 2nd at 5 pm EST.</p>"
+          a: "<p>The Digital Vote-by-Mail Service is now available for use. The service will close on November 2nd at 8 pm EST.</p>"
       page_3:
         slug: support
         title: Support
@@ -170,7 +170,7 @@ en:
         slug: feedback
         title: Feedback
         question_1:
-          q: "Where should I send feedback about the Vote-by-Mail Service or the Digital Ballot Return Pilot?"
+          q: "Where should I send feedback about the Digital Vote-by-Mail Service?"
           a: "<p>Feedback should be sent to the District of Columbia Board of Elections and Ethics at <a href='mailto:director@dcboee.org'> director@dcboee.org</a>.</p>"
 
     section_2:
@@ -218,13 +218,13 @@ en:
         title: Ballot Counting
         question_1:
           q: 'When will the ballots be counted?'
-          a: '<p>Ballots are counted on Election Day.</p>'
+          a: '<p>Ballots counting begins at close of polls on Election Day. Overseas Vote-by-Mail ballots will be counted through November 17.</p>'
         question_2:
           q: 'How are the ballots counted?'
           a: '<p>Ballots returned by mail are counted in the same manner as in the existing District of Columbia absentee voting process. Local election officials receive your return envelope with a marked ballot and attestation. The attestation is reviewed to confirm voter eligibility. After attestation review, the return envelope and secure ballot envelope are separated. The printed ballots are either scanned and counted or counted by hand.</p>'
         question_3:
           q: "Isn't there a risk that ballots may be counted more than once?"
-          a: '<p>The Digital Vote-by-Mail Service and Digital Ballot Return Project count ballots in the same way as  current services for overseas voters. There is no more risk in Digital Vote-by-Mail than in the existing District of Columbia absentee voting process.</p>'
+          a: '<p>Digital Vote-by-Mail ballots are counted in the same way as current services for overseas voters. There is no more risk in Digital Vote-by-Mail than in the existing District of Columbia absentee voting process.</p>'
         question_4:
           q: 'What happens if I send in more than one ballot?'
           a: '<p>Every registered voter can cast only one ballot. Additional marked ballots are disregarded.</p>'
@@ -236,8 +236,8 @@ en:
         slug: service-description
         title: Service Description
         question_1:
-          q: 'What is the Digital Vote-by-Mail Service and the Digital Ballot Return Pilot?'
-          a: '<p>Digital Vote-by-Mail is a new service created by the District of Columbia Board of Elections and Ethics. The service delivers election materials to overseas voters through the Internet, allows voters to complete ballots online, and provides options for ballot return. The goal of the Digital Vote-by-Mail Service is to enable the quick return of ballots from military personnel and citizens overseas.</p><p>The Digital Vote-by-Mail Service is being introduced in the November 2nd General Election in Washington, D.C. For the election, the District of Columbia will digitally generate and transport ballots for 2,500 military and overseas voters.</p>'
+          q: 'What is the Digital Vote-by-Mail Service?'
+          a: '<p>Digital Vote-by-Mail is a new service created by the District of Columbia Board of Elections and Ethics. The service delivers election materials to overseas voters through the Internet, allows voters to complete ballots online, and provides options for ballot return. The goal of the Digital Vote-by-Mail Service is to enable the quick return of ballots from military personnel and citizens overseas.</p><p>The Digital Vote-by-Mail Service is being introduced in the November 2nd General Election in Washington, D.C. For the election, the District of Columbia will digitally generate and distribute ballots to qualified military and overseas voters.</p>'
         question_2:
           q: 'Why should I select Physical Ballot Return?'
           a: '<p>Select this option if you want to return your ballot and vote-by-mail materials through mail or an express mail service. Physical ballot return is very similar to the current vote-by-mail process, except you have the option to mark your ballot online. The Digital Vote-by-Mail Service shortens the time it takes to deliver ballots to voters.</p>'
@@ -285,10 +285,10 @@ en:
           a: "<p>To mark your ballot digitally, you must use Adobe Reader.</p><p>The ballot is marked by clicking on the round circle next to a candidate's name.</p><h3>To vote for:</h3><h4>A candidate</h4><ul class='dashed-list'><li>Click on the circle next to candidate name(s) to select it. Do not vote for more candidates than indicated. This will result in an overvote and your vote for that office will not count.</li></ul><h4>A measure</h4><ul class='dashed-list'><li>Click on circle next to YES or NO to select it.</li><li>Do <strong>not</strong> vote both YES and NO. This will result in an overvote and your vote on that measure will not count.</li></ul><h4>Qualified write-in candidates</h4> <span>(Write-in votes are valid for qualified candidates only)</span><ul class='dashed-list'><li>Type in qualified write-in candidate's name in the blank space provided.</li><li>The total number of votes including write-ins must not exceed the maximum number of votes allowed for the contest or your vote for that contest will not count.</li></ul>"
         question_3:
           q: 'How do I save my Ballot?'
-          a: '<p>To save the Ballot, select File / Save As in the menu Adobe Reader. Save the document using the existing file name. Do NOT rename it. (If the marked ballot is NOT SAVED, and you send it, your ballot will not be marked.) Save the PDF to a place where you can easily find it again.</p>'
+          a: '<p>You do not need to save your ballot, but you do need to print it, by slecting Print from in the File Menu of Adobe Reader.</p>'
         question_4:
-          q: 'What happens if I forget to save my ballot?'
-          a: "<p>Your ballot is not automatically saved. You must save it after you have marked it by selecting Save As from in the File Menu of Adobe Reader. This is an important step. If you do not save the ballot, you will need to re-mark the ballot. Return to home by selecting the Home link at the top of the page.</p>"
+          q: "I printed my ballot, but it doesn't have my votes on it."
+          a: "<p>You must use Adobe Reader to mark your ballot and then print the marked ballot. If you use any other tool to mark your ballot, the ballot may not print correctly. Alternatively, you can print your blank ballot, and mark it by hand.</p>"
         question_5:
           q: "I can't find my ballot. Where is it?"
           a: "<p>You will need to find your ballot to print and return it by mail. It is a good idea to save the marked ballot on your desktop so that you can easily locate it. If you can't find it, look in your Downloads folder, search on the document name, or sort recent documents. If you can't locate your marked ballot, you will need to begin again and mark another ballot. Return to home by selecting the Home link at the top of the page.</p>"
@@ -306,7 +306,7 @@ en:
           a: '<p>A security envelope ensures that your marked ballot is anonymous. Your marked ballot and the attestation confirming your identity are separated in the ballot counting process.</p>'
         question_4:
           q: 'When mailing election materials to my state or territory, do I have to pay postage?'
-          a: '<p>When mailed from any U.S. post office, U.S. embassy or consulate, or APO/FPO mail facility, the hardcopy ballot form is postage-paid. In order to receive free postage, the online version of the form must be mailed in an envelope printed with our <a href="http://www.fvap.gov/resources/media/returnenvelope.pdf"> postage-paid envelope template</a>.</p><p>You may mail the completed form in an envelope with proper postage affixed. Ensure that your form is postmarked (see postmarking instructions below) and sent to arrive before the deadline: 5 pm EST, November 2, 2010. You must pay postage if materials are mailed from a non-U.S. postal facility. </p>'
+          a: '<p>When mailed from any U.S. post office, U.S. embassy or consulate, or APO/FPO mail facility, the hardcopy ballot form is postage-paid. In order to receive free postage, the online version of the form must be mailed in an envelope printed with our <a href="http://www.fvap.gov/resources/media/returnenvelope.pdf"> postage-paid envelope template</a>.</p><p>You may mail the completed form in an envelope with proper postage affixed. Ensure that your form is postmarked (see postmarking instructions below) and sent to arrive before the deadline: 5 pm EST, November 17, 2010. You must pay postage if materials are mailed from a non-U.S. postal facility. </p>'
         question_5:
           q: 'What is a postmark and how do I make sure I get one?'
           a: "<p>A postmark is a postal marking made on a piece of mail indicating the date and time that the item was accepted by the postal service. Postmarks are used to determine if voting materials have been mailed by state deadlines. Due to varying mail pick up times, the day you 'mail' your election mail may not be the day the postal facility postmarks it.</p><p>You may ask the mail clerk to hand stamp the election material so that the date is clearly visible. In certain situations a handwritten postmark and signature from you or a notarizing official may be sufficient. </p>"
@@ -326,7 +326,7 @@ en:
         title: Online Safety
         question_1:
           q: 'Is how I voted secret?'
-          a: '<p>Yes. Secrecy of the ballot is mandated by law and is upheld in all elections. The ballots returned in the Digital Vote-by-Mail service and the Digital Ballot Return Pilot Project are treated exactly the same as all other Vote-by-Mail ballots. Ballot secrecy is maintained.</p>'
+          a: '<p>Yes. Secrecy of the ballot is mandated by law and is upheld in all elections. The ballots returned in the Digital Vote-by-Mail service are treated exactly the same as all other Vote-by-Mail ballots. Ballot secrecy is maintained.</p>'
         question_2:
           q: 'Can how I vote get tracked back to me?'
           a: '<p>No. No election official can trace a ballot back to a particular voter.</p>'
@@ -334,8 +334,8 @@ en:
           q: 'How does my ballot remain anonymous?'
           a: "<h3>Return by Mail</h3><p>When you return your ballot by mail, you first place your marked ballot in an inner security envelope. The security envelope is placed in an outer return envelope with your attestation for mailing back to the BOEE.</p><p>The outer return envelope that contains your attestation with your name and address is opened and separated from the inner security envelope that contains the voted ballot.</p><p>Before the inner security envelope may be opened, it is mixed in with many other security envelopes. This allows the ballot to remain anonymous. Only once the security envelope is mixed in with other security envelopes may the ballot be removed. This maintains the secrecy of the ballot.</p>"
         question_4:
-          q: 'How does the Vote-by-Mail service secure the ballot transmission?'
-          a: '<p>Ballots are transmitted through secure SSL connections. Security methods for ballot transmission are the same as security methods currently used for online banking.</p>'
+          q: 'How does the Vote-by-Mail service secure the ballot distribution?'
+          a: '<p>Ballots are transmitted through secure SSL connections. Security methods for ballot distribution are the same as security methods currently used for online banking.</p>'
         question_5:
           q: 'Is there a chance my ballot could be intercepted?'
           a: '<p>The ballot submission and transportation process is secured with standard SSL protections, the same as with on-line banking and other sensitive Internet-based transactions. However, any Internet activity is subject to threats, including phishing and other social engineering techniques currently used to exploit current web security vulnerabilities, and fool users into visiting fraudulent Web sites that can infect a computer with malicious software -- possibly including malicious software that could interfere with your ballot, and your ballot marking, before you digitally return your marked ballot.</p>'
@@ -352,7 +352,7 @@ en:
 
     security:
       index:
-        info: "<p>Concerns are often raised about the privacy and security of electronically transmitted election materials. Most states now conduct part of the overseas voting process through a partial electronic process— sending blank ballots to overseas voters by fax or through e-mail. DC Digital Vote-by-Mail also supports a partial electronic process by providing electronic delivery of voting materials through the Internet. Marked ballots are returned through traditional mail and express mail services. Some states also permit return of marked ballots by email.</p><p>In addition, for the November 2010 election, DC Digital Vote-by-Mail also includes a pilot trial of a new method for electronic return of marked ballots by voters. Marked ballots are transmitted electronically to the datacenter for the District of Columbia. Security methods for ballot transmission are the same standard SSL security methods currently used for online banking.</p><p>Although the ballot transmission process uses standard security technology, some risks to ballots remain. Any Internet activity is subject to threats, including phishing and other social engineering techniques. These techniques are currently used to exploit current web security vulnerabilities, and to fool users into visiting fraudulent Web sites that can infect a computer with malicious software -- potentially including malicious software that could interfere with your ballot or your ballot marking.</p><p>Secrecy of the ballot is mandated by law and is upheld in DC election procedures. Returned ballots are managed with the same procedures as conventional absentee ballots. In both cases, approved ballots are separated from attestations, and counted by hand. In both cases, printed ballots are not linked to specific voters.</p>"
+        info: "<p>Concerns are often raised about the privacy and security of electronically transmitted election materials. Most states now conduct part of the overseas voting process through a partial electronic process— sending blank ballots to overseas voters by fax or through e-mail. DC Digital Vote-by-Mail also supports a partial electronic process by providing electronic delivery of voting materials through the Internet. Marked ballots are returned through traditional mail and express mail services. Some states also permit return of marked ballots by email.</p><p>Although the ballot distribution process uses standard security technology, some risks to ballots remain. Any Internet activity is subject to threats, including phishing and other social engineering techniques. These techniques are currently used to exploit current web security vulnerabilities, and to fool users into visiting fraudulent Web sites that can infect a computer with malicious software -- potentially including malicious software that could interfere with your ballot or your ballot marking.</p><p>Secrecy of the ballot is mandated by law and is upheld in DC election procedures. Returned ballots are managed with the same procedures as conventional absentee ballots. In both cases, approved ballots are separated from attestations, and counted by hand. In both cases, printed ballots are not linked to specific voters.</p>"
   shared:
     menu:
       step_1:
