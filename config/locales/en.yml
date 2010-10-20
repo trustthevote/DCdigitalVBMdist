@@ -92,11 +92,6 @@ en:
         summary: "You can fill out the ballot online or print it and complete it by hand.<br/><br/>To complete the ballot online, click on the circles next to your candidates to select them. You can also type in write-in candidates where indicated."
         image: "fillOutByHand"
       step_3:
-        title: Save
-        instruction: Save Your Ballot
-        tip: "It is critical to save your marked ballot so that you can print it."
-        summary: "You must save your ballot when you have marked it. Save the PDF on your computer by selecting File/Save As in Adobe Reader. Save the ballot to a place where you can easily find it again (for example, your desktop). Do NOT rename the ballot."
-      step_4:
         title: Print
         instruction: Print Your Ballot
         tip: Tip for the print step

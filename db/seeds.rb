@@ -46,6 +46,5 @@ Registration.create!(
   :first_name        => 'Mike',
   :last_name         => 'Smith',
   :zip               => '24001',
-  :address           => "142 N Street",
-  :city              => "Washington",
-  :state             => "DC")
+  :address           => '142 N Street',
+  :ssn4              => '1234')

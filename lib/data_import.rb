@@ -82,7 +82,7 @@ class DataImport
       r = split.registrations.create(
         :first_name   => firstname,
         :middle_name  => middlename,
-        :last_name    => last_name,
+        :last_name    => lastname,
         :address      => address[:address],
         :zip          => address[:zip])
       
