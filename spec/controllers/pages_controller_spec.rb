@@ -49,14 +49,16 @@ describe PagesController do
     end
     
     it "should return to the check in form if record wasn't found" do
-      post :check_in, :registration => { :name => "unknown" }
+      Registration.should_receive(:match).and_return(nil)
+      post :check_in, :registration => {}
       response.should render_template(:check_in)
       assigns(:registration).should be_nil
     end
     
     it "should move on to the confirm page when record was found" do
       r = Factory(:registration)
-      post :check_in, :registration => { :name => r.name, :zip => r.zip }
+      Registration.should_receive(:match).and_return(r)
+      post :check_in, :registration => {}
       response.should redirect_to(confirm_url)
     end
   end
@@ -86,7 +88,8 @@ describe PagesController do
   context "when completing" do
     it "should render the page" do
       stub_registration
-      Registration.any_instance.expects(:register_check_in!)
+      Registration.should_receive(:find).and_return(@r)
+      @r.should_receive(:register_check_in!)
       get :complete
       response.should render_template(:complete)
     end
@@ -101,7 +104,8 @@ describe PagesController do
     end
     
     it "should register the completion" do
-      Registration.any_instance.expects(:register_flow_completion!)
+      Registration.should_receive(:find).and_return(@r)
+      @r.should_receive(:register_flow_completion!)
       get :thanks
     end
   end

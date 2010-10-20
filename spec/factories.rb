@@ -18,6 +18,14 @@
 # Contributors: Paul Stenbjorn, Aleksey Gureiev, Robin Bahr,
 # Thomas Gaskin, Sean Durham, John Sebes.
 
+class Array
+  def rand
+    self[Kernel.rand(length)]
+  end
+end
+
+MIDDLE_NAMES = ('A' .. 'Z').to_a
+
 Factory.sequence(:name) { |i| "name_#{i}" }
 
 Factory.define :precinct do |f|
@@ -39,7 +47,9 @@ end
 
 Factory.define :registration do |f|
   f.association       :precinct_split
-  f.name              { Faker::Name.name }
+  f.first_name        { Faker::Name.first_name }
+  f.middle_name       { MIDDLE_NAMES.rand }
+  f.last_name         { Faker::Name.last_name }
   f.zip               '34001'
 end
 

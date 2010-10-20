@@ -80,9 +80,11 @@ class DataImport
       address = addresses[address_id.to_i]
       
       r = split.registrations.create(
-        :name        => [ firstname, middlename, lastname, suffix ].reject { |i| i.blank? }.join(" "),
-        :address     => address[:address],
-        :zip         => address[:zip])
+        :first_name   => firstname,
+        :middle_name  => middlename,
+        :last_name    => last_name,
+        :address      => address[:address],
+        :zip          => address[:zip])
       
       puts "#{r.name.ljust(30, ' ')} #{address[:zip]}"
     end

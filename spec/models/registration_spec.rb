@@ -33,31 +33,50 @@ describe Registration do
     r.blank_ballot.url.should == b.pdf.url
   end
 
-  describe "when matches" do
-    it "should find the record that matches info" do
-      r = Factory(:registration, :ssn4 => "1234")
-      Registration.match(:name => r.name, :zip => r.zip, :ssn4 => "1234").should eql r # Strangely '==' doesn't work here
+  it "should return the name composed of parts" do
+    r = registration
+    r.name.should == [ r.first_name, r.middle_name, r.last_name ].join(' ')
+  end
+  
+  context ".match" do
+    let(:reg_with_ssn)    { Factory(:registration, :ssn4 => "1234") }
+    let(:reg_without_ssn) { Factory(:registration, :ssn4 => nil) }
+    
+    it "should find the record that matches w/ ssn" do
+      r = reg_with_ssn
+      rmatch(r.last_name, r.zip, "1234").should eql reg_with_ssn
+    end
+    
+    it "should find the record that matches w/o ssn" do
+      r = reg_without_ssn
+      rmatch(r.last_name, r.zip, "9999").should eql reg_without_ssn
     end
   
     it "should return nil if nothing was found" do
-      Registration.match(:name => "Unknown", :zip => "24001", :ssn4 => '').should be_nil
+      rmatch('Unknown', nil, nil).should be_nil
+    end
+    
+    def rmatch(last_name, zip, ssn4)
+      Registration.match(:last_name => last_name, :zip => zip, :ssn4 => ssn4)
     end
   end
 
   context "logging activities" do
     it "should register the completion" do
       Timecop.freeze do
-        registration.register_flow_completion!
-        registration.activity_records.map(&:type).should == [ "Activity::Completion" ]
-        registration.completed_at.should == Time.now
+        r = Factory(:registration)
+        r.register_flow_completion!
+        r.activity_records.map(&:type).should == [ "Activity::Completion" ]
+        r.completed_at.should == Time.now
       end
     end
     
     it "should register the check-in" do
       Timecop.freeze do
-        registration.register_check_in!
-        registration.activity_records.map(&:type).should == [ "Activity::CheckIn" ]
-        registration.checked_in_at.should == Time.now
+        r = Factory(:registration)
+        r.register_check_in!
+        r.activity_records.map(&:type).should == [ "Activity::CheckIn" ]
+        r.checked_in_at.should == Time.now
       end
     end
   end

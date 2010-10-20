@@ -33,9 +33,13 @@ class Registration < ActiveRecord::Base
   named_scope :finished,   :conditions => "completed_at  IS NOT NULL"
 
   def self.match(r)
-    first(:conditions => { :name => r[:name], :zip => r[:zip], :ssn4_hash => Registration.hash(r[:ssn4]) })
+    first(:conditions => [ "last_name = ? AND zip = ? AND (ssn4_hash IS NULL OR ssn4_hash = ?)", r[:last_name], r[:zip], Registration.hash(r[:ssn4]) ])
   end
 
+  def name
+    @name ||= [ self.first_name, self.middle_name, self.last_name ].reject(&:blank?).join(' ')
+  end
+  
   # Returns the blank ballot PDF
   def blank_ballot
     precinct_split.try(:ballot_style).try(:pdf)

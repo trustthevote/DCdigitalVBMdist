@@ -9,6 +9,11 @@ class DataImport2
   
   private
   
+  def convert_value(val)
+    val = val.to_s.strip
+    val.blank? || /^null$/i =~ val ? nil : val
+  end
+  
   # Imports voters from CSV
   def import_voters(voter_csv_path)
     log "Importing voters"
@@ -17,12 +22,15 @@ class DataImport2
     imported = 0
     
     FasterCSV.foreach(voter_csv_path, :col_sep => "\t", :headers => :first_row, :skip_blanks => true) do |row|
-      ssn4  = row['SSN'][-4, 4] # Grab last four digits of SSN only
-      name  = [ row['FIRSTNAME'], row['MIDDLE'], row['LASTNAME'] ].reject(&:blank?).map(&:strip).join(' ')
+      ssn4    = convert_value((row['SSN'].strip)[-4, 4]) # Grab last four digits of SSN only
+      first   = convert_value(row['FIRSTNAME'])
+      middle  = convert_value(row['MIDDLE'])
+      last    = convert_value(row['LASTNAME'])
       
-      pname = row['SPLIT'].split(' ').first.strip
-      anc   = row['SMD'][0, 2]
-      smd   = row['SMD'][2, 2]
+      # Split details
+      pname   = row['SPLIT'].strip.split(' ').first.strip
+      anc     = (row['SMD'].strip)[0, 2]
+      smd     = (row['SMD'].strip)[2, 2]
       
       # Find split for this voter
       split_name = make_split_name(pname, smd, anc)
@@ -35,10 +43,12 @@ class DataImport2
       raise "Missing ballot for split: #{split_name}. Check your ballots archive." unless split
       
       split.registrations.create!(
-        :name     => name,
-        :address  => row['MAILINGADDRESS'],
-        :ssn4     => ssn4,
-        :zip      => row['ZIP'])
+        :first_name   => first,
+        :middle_name  => middle,
+        :last_name    => last,
+        :address      => convert_value(row['MAILINGADDRESS']),
+        :ssn4         => ssn4,
+        :zip          => convert_value(row['ZIP']))
 
       imported += 1
     end
