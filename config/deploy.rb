@@ -42,17 +42,38 @@ set(:current_path)        { "#{deploy_to}/current" }  # A hack since cap 2.3.0 u
 
 # Create uploads directory and link, remove rep clone
 task :setup, :roles => :app do
-  run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-  run "cp #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+  run "cp {#{shared_path},#{release_path}}/config/database.yml"
+  run "cp {#{shared_path},#{release_path}}/config/config.yml"
+  run "cp {#{shared_path},#{release_path}}/config/initializers/session_store.rb"
   run "ln -s #{shared_path}/assets #{release_path}/public/assets"
   run "rm -Rf #{release_path}/.git" if fetch(:deploy_to) != :export
   
   run "cd #{latest_release}; bundle install --without development test"
 end
+
 after 'deploy:update_code', 'setup'
+before 'setup', 'deploy:config:session_store'
 
 namespace :deploy do
   namespace :config do
+    task :session_store, :roles => :app do
+      shared_session_store_path = "#{shared_path}/config/initializers/session_store.rb"
+      unless remote_file_exists?(shared_session_store_path)
+        run "mkdir -p #{File.dirname(shared_session_store_path)}"
+
+        ss = File.open(File.join(File.dirname(__FILE__), 'initializers', 'session_store.rb')).read
+        
+        require 'active_support'
+        secret = ActiveSupport::SecureRandom.hex(128)
+        encryption_key = ActiveSupport::SecureRandom.hex(32)
+
+        ss.gsub!(/(:secret\s+=>\s+)'[^']+'/, "\\1'#{secret}'")
+        ss.gsub!(/(:encryption_key\s+=>\s+)'[^']+'/, "\\1'#{encryption_key}'")
+        
+        put ss, shared_session_store_path
+      end
+    end
+    
     desc "Configures database"
     task :db, :roles => :app do
       if !config[:dbname] || !config[:username] || !config[:password]
@@ -121,6 +142,10 @@ namespace :deploy do
 end
 
 after "deploy:restart", "deploy:cleanup"
+
+def remote_file_exists?(full_path)
+  'true' == capture("if [ -e #{full_path} ]; then echo 'true'; fi").strip
+end
 
 # Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-*')].each do |vendored_notifier|
 #   $: << File.join(vendored_notifier, 'lib')
