@@ -150,7 +150,7 @@ en:
         title: Key Dates
         question_1:
           q: "What are key dates concerning the November 2nd election?"
-          a: "<h3>November 2nd</h3><p>Last Day to Return Your Ballot by mail, must be postmarked by November 2nd, 8 pm EST)</p><h3>November 17</h3><p> Vote-by-Mail ballots must arrive by November 17, in order to be eligible for counting.</p>"
+          a: "<h3>November 2nd</h3><p>Last Day to Return Your Ballot by mail, must be postmarked by November 2nd, 8 pm EST)</p><h3>November 19</h3><p> Vote-by-Mail ballots must arrive by November 19, in order to be eligible for counting.</p>"
         question_2:
           q: "When is the best time to apply for an absentee ballot?"
           a: "<p>Registered voters may apply for a vote-by-mail ballot for an upcoming election at any time. If you apply by mail, your application must be received no later than 7 days before an election.</p><p>For the November 2nd general election, the last day to apply for a vote-by-mail ballot by mail is October 22, 2010.</p>"
@@ -218,7 +218,7 @@ en:
         title: Ballot Counting
         question_1:
           q: 'When will the ballots be counted?'
-          a: '<p>Ballots counting begins at close of polls on Election Day. Overseas Vote-by-Mail ballots will be counted through November 17.</p>'
+          a: '<p>Ballots counting begins at close of polls on Election Day. Overseas Vote-by-Mail ballots will be counted through November 19.</p>'
         question_2:
           q: 'How are the ballots counted?'
           a: '<p>Ballots returned by mail are counted in the same manner as in the existing District of Columbia absentee voting process. Local election officials receive your return envelope with a marked ballot and attestation. The attestation is reviewed to confirm voter eligibility. After attestation review, the return envelope and secure ballot envelope are separated. The printed ballots are either scanned and counted or counted by hand.</p>'
@@ -306,7 +306,7 @@ en:
           a: '<p>A security envelope ensures that your marked ballot is anonymous. Your marked ballot and the attestation confirming your identity are separated in the ballot counting process.</p>'
         question_4:
           q: 'When mailing election materials to my state or territory, do I have to pay postage?'
-          a: '<p>When mailed from any U.S. post office, U.S. embassy or consulate, or APO/FPO mail facility, the hardcopy ballot form is postage-paid. In order to receive free postage, the online version of the form must be mailed in an envelope printed with our <a href="http://www.fvap.gov/resources/media/returnenvelope.pdf"> postage-paid envelope template</a>.</p><p>You may mail the completed form in an envelope with proper postage affixed. Ensure that your form is postmarked (see postmarking instructions below) and sent to arrive before the deadline: 5 pm EST, November 17, 2010. You must pay postage if materials are mailed from a non-U.S. postal facility. </p>'
+          a: '<p>When mailed from any U.S. post office, U.S. embassy or consulate, or APO/FPO mail facility, the hardcopy ballot form is postage-paid. In order to receive free postage, the online version of the form must be mailed in an envelope printed with our <a href="http://www.fvap.gov/resources/media/returnenvelope.pdf"> postage-paid envelope template</a>.</p><p>You may mail the completed form in an envelope with proper postage affixed. Ensure that your form is postmarked (see postmarking instructions below) and sent to arrive before the deadline: 5 pm EST, November 19, 2010. You must pay postage if materials are mailed from a non-U.S. postal facility. </p>'
         question_5:
           q: 'What is a postmark and how do I make sure I get one?'
           a: "<p>A postmark is a postal marking made on a piece of mail indicating the date and time that the item was accepted by the postal service. Postmarks are used to determine if voting materials have been mailed by state deadlines. Due to varying mail pick up times, the day you 'mail' your election mail may not be the day the postal facility postmarks it.</p><p>You may ask the mail clerk to hand stamp the election material so that the date is clearly visible. In certain situations a handwritten postmark and signature from you or a notarizing official may be sufficient. </p>"
