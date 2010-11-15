@@ -21,6 +21,7 @@
     - t(".steps").split('|').each do |step|
       %li= step
   %p= t '.thanks'
+  %p= t '.warning'
   %p= link_to "Start Mail-in Ballot", during_voting? ? overview_path : front_path, :class => button_class(!during_voting?)
   %p#instructions
     Read complete #{link_to "instructions", help_path, :target => "_blank"} for the service.

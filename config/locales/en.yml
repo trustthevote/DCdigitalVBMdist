@@ -36,6 +36,8 @@ en:
       prompt: "Using this service you will:"
       steps: "Download a voter attestation, print it, and sign it|Download your ballot, fill it out, and print it|Return both attestation and ballot by mail or express delivery service."
       thanks: "<p>Thank you for your participation in this election.</p>"
+      warning: "<p><b>WARNING:</b><br>The open invitation to test vulnerabilities in The District of Columbia's <i>Digital Vote By Mail</i> Program has expired. Consequently, any further attempts to infiltrate the District of Columbia Board of Elections and Ethics Computer Networks Systems will be viewed as a corrupt election practice as defined under D.C. CODE Para. 1-1001.14 et seq., and such acts will be subject to prosecution:<br><i>Any person who shall register, or attempt to register, or vote or attempt to vote . . . and make any false representations as to his or her qualifications for registering or voting . . . or be guilty of bribery or intimidation of any voter at an election, or being registered, shall vote or attempt to vote more than once in any election so held, or shall purloin or secrete any of the votes cast in an election . . . shall, upon conviction, be fined not more than $10,000 or be imprisoned not more than 5 years, or both.</i></p></p>"
+
 
     overview:
       title: Digital Vote-by-Mail Service
