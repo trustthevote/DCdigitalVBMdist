@@ -1,5 +1,5 @@
-DC Digital VBM
-==============
+DC Digital VBM (dist)
+=====================
 
 
 Requirements
@@ -18,11 +18,11 @@ Get the Bundler:
   
 Get the sources:
 
-    $ git clone git://github.com/trustthevote/DCdigitalVBM.git
+    $ git clone git://github.com/trustthevote/DCdigitalVBMdist.git
 
 Install gem requirements:
 
-    $ cd DCdigitalVBM
+    $ cd DCdigitalVBMdist
     $ bundle install
 
 Configure the database (change your username / password):
